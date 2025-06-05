@@ -1,0 +1,5 @@
+(channel
+  (version 0)
+  (name 'pognul-guix-channel)
+  (url "https://gitlab.com/ch4og/pognul-guix-channel.git")
+  (branch "main"))
