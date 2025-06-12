@@ -9,11 +9,11 @@
 (define-public lazygit
   (package
     (name "lazygit")
-    (version "0.51.1")
+    (version "0.52.0")
     (source (origin
               (method url-fetch)
               (uri (string-append "https://github.com/jesseduffield/lazygit/archive/refs/tags/v" version ".tar.gz"))
-              (sha256 (base32 "01imgysvqaym2fw5dwfp1xd7jfax424sxslb53cvyp9piacb6zs6"))
+              (sha256 (base32 "1y363yn884d1mshzgdnwf6dgjw5b9f1si7zam6s6z8yc0m8h8srd"))
               (file-name (git-file-name name version))))
     (build-system go-build-system)
     (arguments
