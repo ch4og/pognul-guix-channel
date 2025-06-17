@@ -8,25 +8,25 @@
 
 (define-public lazygit
   (package
-   (name "lazygit")
-   (version "0.52.0")
-   (source
-    (origin
-     (method git-fetch)
-     (uri (git-reference
-           (url "https://github.com/jesseduffield/lazygit")
-           (commit (string-append "v" version))))
-     (file-name (git-file-name name version))
-     (sha256
-      (base32 "0nijsnx9nq8kdmjcx9g2fxbj6rmx2wqy1xr5aysgzlc1ysi53cdm"))))
-   (build-system go-build-system)
-   (arguments
-    (list
-     #:import-path "github.com/jesseduffield/lazygit"
-     #:go go-1.24
-     #:tests? #f
-     #:install-source? #f))
-   (home-page "https://github.com/jesseduffield/lazygit")
-   (synopsis "Simple terminal UI for git commands")
-   (description "Simple terminal UI for git commands")
-   (license license:expat)))
+    (name "lazygit")
+    (version "0.52.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/jesseduffield/lazygit")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32 "0nijsnx9nq8kdmjcx9g2fxbj6rmx2wqy1xr5aysgzlc1ysi53cdm"))))
+    (build-system go-build-system)
+    (arguments
+     (list
+      #:import-path "github.com/jesseduffield/lazygit"
+      #:go go-1.24
+      #:tests? #f
+      #:install-source? #f))
+    (home-page "https://github.com/jesseduffield/lazygit")
+    (synopsis "Simple terminal UI for git commands")
+    (description "Simple terminal UI for git commands")
+    (license license:expat)))
