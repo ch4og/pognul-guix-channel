@@ -3,6 +3,7 @@
   #:use-module (guix build-system go)
   #:use-module (guix git-download)
   #:use-module (gnu packages golang)
+  #:use-module (gnu packages version-control)
   #:use-module ((guix licenses)
                 #:prefix license:))
 
@@ -26,6 +27,7 @@
       #:go go-1.24
       #:tests? #f
       #:install-source? #f))
+    (propagated-inputs (list git-minimal))
     (home-page "https://github.com/jesseduffield/lazygit")
     (synopsis "Simple terminal UI for git commands")
     (description "Simple terminal UI for git commands")
