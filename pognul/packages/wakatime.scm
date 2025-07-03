@@ -294,7 +294,7 @@ It can help you to know os information.")
 (define-public wakatime-cli
   (package
    (name "wakatime-cli")
-   (version "1.115.3")
+   (version "1.115.5")
    (source
     (origin
      (method git-fetch)
@@ -303,7 +303,7 @@ It can help you to know os information.")
            (commit (string-append "v" version))))
      (file-name (git-file-name name version))
      (sha256
-      (base32 "1s5lrkxd9vsqdvq2hyqcwy2c3z7naykp32ip71iqdg4as1gh0fkk"))))
+      (base32 "05cy7rmwvmwbpb2i3vf9afd3m1ff4sf5n87v9z6gvzgkmm8cjdna"))))
    (build-system go-build-system)
    (native-inputs (list go-github-com-gandarez-go-olson-timezone-for-wakatime
 			go-github-com-gandarez-go-realpath-for-wakatime
