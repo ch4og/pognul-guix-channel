@@ -36,3 +36,5 @@
     (synopsis "Simple terminal UI for git commands")
     (description "Simple terminal UI for git commands")
     (license license:expat)))
+
+lazygit
