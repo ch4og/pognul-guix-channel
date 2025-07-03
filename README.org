@@ -1,0 +1,11 @@
+#+OPTIONS: toc:nil
+* Pognul Guix channel
+
+This includes modified code from:
+
+- [[https://git.outfoxxed.me/quickshell/quickshell][quickshell]] (LGPLv3)
+- [[https://codeberg.org/look/misako][misako]] (GPLv3)
+
+#+BEGIN_EXPORT html
+<sub>"poGNUl" is a pun from Russian "погнул" (bent) + "GNU" (free software)</sub>
+#+END_EXPORT
