@@ -1,3 +1,7 @@
+;;; Copyright © 2025 Nikita Mitasov <mitanick@ya.ru>
+;;;
+;;; This file is NOT part of GNU Guix.
+
 (define-module (pognul packages wakatime)
   #:use-module (guix packages)
   #:use-module (guix build-system go)
