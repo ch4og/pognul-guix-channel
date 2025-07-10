@@ -3,16 +3,16 @@
 ;;; This file is NOT part of GNU Guix.
 
 (define-module (pognul packages mwc)
-  #:use-module (guix packages)
-  #:use-module (gnu packages freedesktop)
-  #:use-module (gnu packages xdisorg)
-  #:use-module (gnu packages wm)
-  #:use-module (gnu packages pkg-config)
-  #:use-module (guix gexp)
+  #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix build-system meson)
+  #:use-module (guix gexp)
   #:use-module (guix git-download)
-  #:use-module ((guix licenses)
-                #:prefix license:))
+  #:use-module (guix packages)
+  #:use-module (gnu packages bash)
+  #:use-module (gnu packages freedesktop)
+  #:use-module (gnu packages pkg-config)
+  #:use-module (gnu packages wm)
+  #:use-module (gnu packages xdisorg))
 
 (define-public mwc
   (package
@@ -29,18 +29,17 @@
         (base32 "07fchsw4mrj5236parals1yiqv1x0hh0w93m9512yg608xv4by9v"))))
     (build-system meson-build-system)
     (native-inputs (list pkg-config wayland-protocols))
-    (inputs (list libinput-minimal
+    (inputs (list bash-minimal
+                  libinput-minimal
                   libdrm
                   libxkbcommon
                   pixman
                   scenefx
                   wayland
                   wlroots))
-
     (arguments
      (list
       #:build-type "release"
-      #:tests? #f
       #:phases
       #~(modify-phases %standard-phases
           (add-after 'install 'wrap-mwc
@@ -50,8 +49,12 @@
                   (,(string-append #$output "/share/mwc/default.conf")))))))))
 
     (home-page "https://github.com/dqrk0jeste/mwc")
-    (synopsis "tiling wayland compositor based on wlroots and scenefx")
-    (description "tiling wayland compositor based on wlroots and scenefx")
+    (synopsis "Tiling wayland compositor based on wlroots and scenefx")
+    (description
+     "@command{mwc} (formerly owl) is a tiling Wayland compositor that
+implements a master layout where windows are tiled horizontally and then
+vertically.  It also offers optional visual features like animations,
+transparency, rounded corners and blur.")
     (license license:expat)))
 
 mwc
