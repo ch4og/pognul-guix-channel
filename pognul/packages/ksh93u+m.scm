@@ -6,7 +6,7 @@
   #:use-module (guix git-download)
   #:use-module (guix build-system gnu)
   #:use-module (guix gexp)
-  #:use-module (guix licenses)
+  #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix utils)
   #:use-module (gnu packages base)
   #:use-module (gnu packages bash)
@@ -83,5 +83,5 @@
        "KornShell is an interactive UNIX command interpreter as well as a
 POSIX compliant scripting language which is a superset of sh.
 This is a maintained modern fork of the original AT&T KornShell (ksh93).")
-      (license epl2.0))))
+      (license license:epl2.0))))
 ksh93u+m
