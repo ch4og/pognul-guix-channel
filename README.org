@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Nikita Mitasov <mitanick@ya.ru>
+# SPDX-License-Identifier: CC0-1.0
+
 #+TITLE: Pognul Guix Channel
 #+OPTIONS: toc:nil
 
@@ -6,14 +9,6 @@ This is my personal Guix channel with software I use and modify.
 Some packages are not in upstream Guix or are changed for my needs.
 
 *This channel includes nonfree and proprietary software.*
-
-Files taken or changed from other projects keep their original licenses.  
-
-All other files are under the GNU GPL v3.  
-Files with third-party code say so in their header.
-
-All needed third-party licenses are in this repository.
-
 
 #+BEGIN_EXPORT html
 <sub>"poGNUl" is a pun from Russian "погнул" (bent) + "GNU" (free software)</sub><br>

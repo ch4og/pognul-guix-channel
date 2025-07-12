@@ -1,3 +1,7 @@
+;; -*- mode: scheme -*-
+;; SPDX-FileCopyrightText: 2025 Nikita Mitasov <mitanick@ya.ru>
+;; SPDX-License-Identifier: CC0-1.0
+
 (channel
  (version 0)
  (name 'pognul-guix-channel)

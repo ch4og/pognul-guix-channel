@@ -1,6 +1,6 @@
-;;; Copyright © 2025 Nikita Mitasov <mitanick@ya.ru>
-;;;
-;;; This file is NOT part of GNU Guix.
+;;; SPDX-FileCopyrightText: 2025 Nikita Mitasov <mitanick@ya.ru>
+;;; SPDX-License-Identifier: GPL-3.0-or-later
+
 (define-module (pognul packages ksh93u+m)
   #:use-module (guix packages)
   #:use-module (guix git-download)
@@ -108,4 +108,3 @@ This is a maintained modern fork of the original AT&T KornShell (ksh93).")
       (license license:epl2.0))))
 
 ksh93u+m
-

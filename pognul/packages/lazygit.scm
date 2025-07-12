@@ -1,6 +1,5 @@
-;;; Copyright © 2025 Nikita Mitasov <mitanick@ya.ru>
-;;;
-;;; This file is NOT part of GNU Guix.
+;;; SPDX-FileCopyrightText: 2025 Nikita Mitasov <mitanick@ya.ru>
+;;; SPDX-License-Identifier: GPL-3.0-or-later
 
 (define-module (pognul packages lazygit)
   #:use-module (guix packages)

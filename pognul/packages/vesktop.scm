@@ -1,9 +1,6 @@
 ;;; Copyright © 2025 Murilo <murilo@disroot.org>
-;;; Copyright © 2025 Nikita Mitasov <mitanick@ya.ru>
-;;;
-;;; This file is a modified version of `binaries.scm` from https://codeberg.org/look/misako
-;;; Originally licensed under the GNU GPLv3
-;;; This file is NOT part of GNU Guix.
+;;; SPDX-FileCopyrightText: 2025 Nikita Mitasov <mitanick@ya.ru>
+;;; SPDX-License-Identifier: GPL-3.0-only
 
 (define-module (pognul packages vesktop)
   #:use-module ((guix licenses) #:prefix license:)
@@ -159,3 +156,4 @@
     (home-page "https://github.com/Vencord/Vesktop")
     (license (list license:gpl3))))
 
+vesktop
