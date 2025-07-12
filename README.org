@@ -10,6 +10,18 @@ Some packages are not in upstream Guix or are changed for my needs.
 
 *This channel includes nonfree and proprietary software.*
 
+Define it like this:
+#+BEGIN_SRC scheme
+  (channel
+   (name 'pognul)
+   (url "https://codeberg.org/ch4og/pognul-guix-channel.git")
+   (introduction
+    (make-channel-introduction
+     "c57a1c7744e08331538121238e3f5fc109271796"
+     (openpgp-fingerprint
+      "7C9E 7EBA 828C 58DF DACE  5BED 4DCC 7AB7 FC75 319B"))))
+#+END_SRC
+
 #+BEGIN_EXPORT html
 <sub>"poGNUl" is a pun from Russian "погнул" (bent) + "GNU" (free software)</sub><br>
 #+END_EXPORT
