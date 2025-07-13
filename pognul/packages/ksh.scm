@@ -1,7 +1,7 @@
 ;;; SPDX-FileCopyrightText: 2025 Nikita Mitasov <me@ch4og.com>
 ;;; SPDX-License-Identifier: GPL-3.0-or-later
 
-(define-module (pognul packages ksh93u+m)
+(define-module (pognul packages ksh)
   #:use-module (guix packages)
   #:use-module (guix git-download)
   #:use-module (guix build-system gnu)
@@ -11,13 +11,13 @@
   #:use-module (gnu packages elf)
   #:use-module (gnu packages commencement))
 
-(define-public ksh93u+m
+(define-public ksh
   (let ((commit "11981f5fd6d6d6cb758ddf176b47126162daa618")
         (version "1.0.10")
         (revision "1")
         (release? #f))
     (package
-      (name "ksh93u+m")
+      (name "ksh")
       (version (if release? version
                    (git-version version revision commit)))
       (source
@@ -107,4 +107,7 @@ POSIX compliant scripting language which is a superset of sh.
 This is a maintained modern fork of the original AT&T KornShell (ksh93).")
       (license license:epl2.0))))
 
-ksh93u+m
+(define-public ksh93u+m
+  (deprecated-package "ksh93u+m" ksh))
+
+ksh
