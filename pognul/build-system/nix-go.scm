@@ -92,6 +92,7 @@
              (chmod "." #o755)
              (chmod "go.mod" #o644)
              (chmod "go.sum" #o644)
+             (invoke "chmod" "-R" "u+w" ".")
 
              (when #$tidy?
                (invoke "go" "mod" "tidy"))
