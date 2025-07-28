@@ -13,7 +13,7 @@
 (define-public lazygit
   (package
     (name "lazygit")
-    (version "0.52.0")
+    (version "0.53.0")
     (source
      (origin
        (method git-fetch)
@@ -22,10 +22,10 @@
              (commit (string-append "v" version))))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "0nijsnx9nq8kdmjcx9g2fxbj6rmx2wqy1xr5aysgzlc1ysi53cdm"))))
+        (base32 "188g2v159hvnjd0cz61mj9c45m17i8a1brsz1d6lah2i2z0irmxv"))))
     (build-system nix-go-build-system)
     (arguments
-     `(#:vendor-hash "07q05pbl11r39z0qlqfs70xvzxb5nj5288vkhb6sj1irngcx9767"
+     `(#:vendor-hash "06shyxk6nh890gn8n0lzl6ri04yc53f2zm8szqvcf74j05s339hb"
        #:go ,go-1.24
        #:ldflags `("-X" ,(string-append "main.version=" ,version)
                    "-X" "'main.buildSource=ch4og/pognul Guix channel'")))
