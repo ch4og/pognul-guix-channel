@@ -26,7 +26,9 @@
     (build-system nix-go-build-system)
     (arguments
      `(#:vendor-hash "07q05pbl11r39z0qlqfs70xvzxb5nj5288vkhb6sj1irngcx9767"
-       #:go ,go-1.24))
+       #:go ,go-1.24
+       #:ldflags `("-X" ,(string-append "main.version=" ,version)
+                   "-X" "'main.buildSource=ch4og/pognul Guix channel'")))
     (propagated-inputs (list git-minimal))
     (home-page "https://github.com/jesseduffield/lazygit")
     (synopsis "Simple terminal UI for git commands")
